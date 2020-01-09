@@ -22,7 +22,7 @@ parse_git_branch() {
 PROMPT='%10F%n%9F@%10F%m%f: %4F%~%9F$(parse_git_branch)%f \$ '
 
 # Custom path
-export PATH=~/bin:~/.npm-global/bin:/opt/puppetlabs/bin:$PATH
+export PATH=~/bin:~/.npm-global/bin:~/.gem/ruby/2.6.0/bin:/opt/puppetlabs/bin:~/Library/Python/3.7/bin:$PATH
 
 # Basic aliases
 if [ -f ~/.dotfiles/aliases ]; then
