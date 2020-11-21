@@ -22,7 +22,7 @@ parse_git_branch() {
 PROMPT='%10F%n%9F@%10F%m%f: %4F%~%9F$(parse_git_branch)%f \$ '
 
 # Custom path
-export PATH=~/bin:~/.npm-global/bin:~/.gem/ruby/2.6.0/bin:/opt/puppetlabs/bin:~/Library/Python/3.7/bin:$PATH
+export PATH=$PATH:~/bin:~/.npm-global/bin
 
 # Basic aliases
 if [ -f ~/.dotfiles/aliases ]; then
@@ -33,3 +33,6 @@ fi
 if [ -f ~/.zsh_aliases ]; then
 	. ~/.zsh_aliases
 fi
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/vault vault
