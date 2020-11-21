@@ -33,3 +33,5 @@ Why not simply configure terminal to pretty and familiar?
 You can import the Terminal.terminal profile into the macOS terminal
 
 ![Screenshot of terminal](assets/terminal.png)
+
+_I mean do you see that pink highlighting_ 👆
