@@ -61,7 +61,7 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 alias ls='ls --color=auto'
-alias ll='ls -alF'
+alias ll='ls -alhF'
 
 # bash completion
 if ! shopt -oq posix; then
