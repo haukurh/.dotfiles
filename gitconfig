@@ -1,0 +1,13 @@
+[push]
+	default = simple
+[alias]
+    hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+    hista = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short --all
+    co = checkout
+    ci = commit
+    st = status
+    ss = status --short
+    poh = push origin HEAD
+    tree = log --all --graph --decorate --oneline --simplify-by-decoration
+    permission-reset = !git diff -p -R --no-color | grep -E \"^(diff|(old|new) mode)\" --color=never | git apply
+    fap = !git fetch -ap && git pull
