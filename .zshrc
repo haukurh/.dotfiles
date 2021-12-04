@@ -22,7 +22,7 @@ parse_git_branch() {
 PROMPT='%10F%n%9F@%10F%m%f: %4F%~%9F$(parse_git_branch)%f \$ '
 
 # Custom path
-export PATH=$PATH::~/bin
+export PATH=$PATH::~/bin:~/.php
 
 # macOS aliases
 alias ls="ls -G"

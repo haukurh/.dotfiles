@@ -48,7 +48,7 @@ else
 fi
 unset color_prompt debian_chroot
 
-export PATH="$PATH:~/bin"
+export PATH="$PATH:~/bin:~/.php"
 
 # basic aliases
 if [ -f ~/.dotfiles/aliases ]; then
