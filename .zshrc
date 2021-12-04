@@ -22,7 +22,7 @@ parse_git_branch() {
 PROMPT='%10F%n%9F@%10F%m%f: %4F%~%9F$(parse_git_branch)%f \$ '
 
 # Custom path
-export PATH=$PATH:~/bin:~/.npm-global/bin
+export PATH=$PATH::~/bin
 
 # macOS aliases
 alias ls="ls -G"
@@ -39,4 +39,7 @@ if [ -f ~/.zsh_aliases ]; then
 fi
 
 autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /usr/local/bin/vault vault
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
