@@ -31,8 +31,8 @@ case "$TERM" in
   xterm-color|*-256color) color_prompt=yes;;
 esac
 
-COLOR_RED='\[\033[0;31m\]'
-COLOR_GREEN='\[\033[0;32m\]'
+COLOR_RED='\[\033[0;91m\]'
+COLOR_GREEN='\[\033[0;92m\]'
 COLOR_BLUE='\[\033[0;34m\]'
 COLOR_RESET='\[\033[00m\]'
 PROMPT_TITLE='\[\e]0;\u@\h: \w\a\]'
