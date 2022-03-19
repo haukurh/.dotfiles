@@ -21,11 +21,6 @@ shopt -s checkwinsize
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
-# set variable identifying the chroot you work in (used in the prompt below)
-if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
-  debian_chroot=$(cat /etc/debian_chroot)
-fi
-
 # Git branch to display in prompt
 parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
@@ -40,13 +35,14 @@ COLOR_RED='\[\033[0;31m\]'
 COLOR_GREEN='\[\033[0;32m\]'
 COLOR_BLUE='\[\033[0;34m\]'
 COLOR_RESET='\[\033[00m\]'
+PROMPT_TITLE='\[\e]0;\u@\h: \w\a\]'
 
 if [ "$color_prompt" = yes ]; then
-  PS1="${debian_chroot:+($debian_chroot)}${COLOR_GREEN}\u${COLOR_RED}@${COLOR_GREEN}\h${COLOR_RESET}: ${COLOR_BLUE}\w${COLOR_RED}\$(parse_git_branch)${COLOR_RESET} $ "
+  PS1="${PROMPT_TITLE}${COLOR_GREEN}\u${COLOR_RED}@${COLOR_GREEN}\h${COLOR_RESET}: ${COLOR_BLUE}\w${COLOR_RED}\$(parse_git_branch)${COLOR_RESET} \$ "
 else
-  PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w$(parse_git_branch) \$ '
+  PS1="${PROMPT_TITLE}\u@\h:\w$(parse_git_branch) \$ "
 fi
-unset color_prompt debian_chroot
+unset color_prompt
 
 export PATH="$PATH:~/bin:~/.php"
 
