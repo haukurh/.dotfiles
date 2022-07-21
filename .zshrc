@@ -12,6 +12,12 @@ setopt prompt_subst
 # Disable beep on error
 unsetopt BEEP
 
+# Auto complete slash when going down directory. i.e. 'cd ..(tab)' => 'cd ../' 
+zstyle ':completion:*' special-dirs true
+
+# Disable auto remove slash
+setopt no_auto_remove_slash
+
 # Save command history
 HISTFILE=${ZDOTDIR:-$HOME}/.zsh_history
 HISTSIZE=2000
