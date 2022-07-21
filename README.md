@@ -20,9 +20,19 @@ mv .zshrc .zshrc.bak && ln -s .dotfiles/.zshrc .
 Some useful git configuration can be included in `~/.gitconfig`
 
 ```
+[user]
+	name = <YOUR NAME>
+	email = <YOUR EMAIL>
 [include]
 	path = ~/.dotfiles/gitconfig
+[includeIf "gitdir:~/src/work/"]
+	path = ~/.gitconfig-work
+[includeIf "gitdir:~/src/projects/"]
+	path = ~/.gitconfig-personal
 ```
+
+With these includeIf statements we can have custom settings based on folders,
+this can be useful if you use have different git email for work vs. personal for example.
 
 ## macOS terminal
 
