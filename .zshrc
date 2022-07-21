@@ -12,6 +12,11 @@ setopt prompt_subst
 # Disable beep on error
 unsetopt BEEP
 
+# Save command history
+HISTFILE=${ZDOTDIR:-$HOME}/.zsh_history
+HISTSIZE=2000
+SAVEHIST=10000
+
 # Enable auto complete for programs like git
 autoload -U compinit
 compinit
