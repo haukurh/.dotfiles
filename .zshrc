@@ -38,5 +38,10 @@ if [ -f ~/.zsh_aliases ]; then
 	. ~/.zsh_aliases
 fi
 
+# Custom settings
+if [ -f ~/.zshrc.mine ]; then
+	. ~/.zshrc.mine
+fi
+
 autoload -U +X bashcompinit && bashcompinit
 
