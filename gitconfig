@@ -1,19 +1,21 @@
 [init]
-    defaultBranch = main
+	defaultBranch = main
 [push]
-    default = simple
+	default = simple
 [pull]
-    rebase = true
+	rebase = true
 [fetch]
-    prune = true
+	prune = true
 [alias]
-    hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
-    hista = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short --all
-    co = checkout
-    ci = commit
-    st = status
-    ss = status --short
-    poh = push origin HEAD
-    tree = log --all --graph --decorate --oneline --simplify-by-decoration
-    permission-reset = !git diff -p -R --no-color | grep -E \"^(diff|(old|new) mode)\" --color=never | git apply
-    fap = !git fetch -ap && git pull
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	hista = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short --all
+	co = checkout
+	ci = commit
+	st = status
+	ss = status --short
+	poh = push origin HEAD
+	tree = log --all --graph --decorate --oneline --simplify-by-decoration
+	permission-reset = !git diff -p -R --no-color | grep -E \"^(diff|(old|new) mode)\" --color=never | git apply
+	fap = !git fetch -ap && git pull
+[core]
+	excludesfile = ~/.gitignore.global
