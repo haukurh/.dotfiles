@@ -9,6 +9,9 @@ unsetopt automenu
 # Enable variables in prompt
 setopt prompt_subst
 
+# Disable beep on error
+unsetopt BEEP
+
 # Enable auto complete for programs like git
 autoload -U compinit
 compinit
