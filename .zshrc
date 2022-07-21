@@ -24,6 +24,9 @@ PROMPT='%10F%n%9F@%10F%m%f: %4F%~%9F$(parse_git_branch)%f \$ '
 # Custom path
 export PATH="~/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
+# Set default editor
+export EDITOR="vim"
+
 # macOS aliases
 alias ls="ls -G"
 alias ll="ls -lhaG"
