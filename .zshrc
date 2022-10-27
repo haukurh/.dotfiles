@@ -24,6 +24,9 @@ SAVEHIST=10000
 autoload -U compinit
 compinit
 
+# Custom path
+export PATH="$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+
 # Git branch to display in prompt
 parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
@@ -31,9 +34,6 @@ parse_git_branch() {
 
 # Color terminal
 PROMPT='%10F%n%9F@%10F%m%f: %4F%~%9F$(parse_git_branch)%f \$ '
-
-# Custom path
-export PATH="$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 # Set default editor
 export EDITOR="vim"
