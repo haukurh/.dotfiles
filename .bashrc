@@ -47,6 +47,9 @@ else
 fi
 unset color_prompt
 
+# Set default editor
+export EDITOR="vim"
+
 # basic aliases
 if [ -f ~/.dotfiles/aliases ]; then
   . ~/.dotfiles/aliases
