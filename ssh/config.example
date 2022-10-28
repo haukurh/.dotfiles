@@ -1,7 +1,0 @@
-Host *
-	ServerAliveInterval 60
-	ControlPath ~/.ssh/connections/%r@%h:%p
-	ControlMaster auto
-	ControlPersist 120
-# Uncomment for macOS
-#	UseKeychain yes
