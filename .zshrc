@@ -38,10 +38,6 @@ PROMPT='%10F%n%9F@%10F%m%f: %4F%~%9F$(parse_git_branch)%f \$ '
 # Set default editor
 export EDITOR="vim"
 
-# macOS aliases
-alias ls="ls -G"
-alias ll="ls -lhaG"
-
 # Basic aliases
 if [ -f ~/.dotfiles/aliases ]; then
 	. ~/.dotfiles/aliases

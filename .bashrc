@@ -51,10 +51,6 @@ unset color_prompt
 export EDITOR="vim"
 
 # basic aliases
-alias ls='ls --color=auto'
-alias ll='ls -alhF'
-
-# basic aliases
 if [ -f ~/.dotfiles/aliases ]; then
   . ~/.dotfiles/aliases
 fi
