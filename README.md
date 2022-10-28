@@ -1,5 +1,7 @@
 # My personal dotfiles
 
+The aim of this project is to provide minimalistic yet powerful and convenient default configuration files. 
+
 ## shell
 
 Configuration files for zsh and bash are available.
