@@ -57,4 +57,3 @@ if [ -f ~/.zshrc.mine ]; then
 fi
 
 autoload -U +X bashcompinit && bashcompinit
-
