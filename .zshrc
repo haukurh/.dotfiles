@@ -24,7 +24,7 @@ SAVEHIST=10000
 autoload -U compinit
 compinit
 
-# Custom path
+# Base path
 export PATH="$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 # Git branch to display in prompt
