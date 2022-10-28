@@ -7,6 +7,7 @@ alias ...="cd ../.."
 
 # git aliases
 alias g="git"
+alias s="git status"
 alias ga="git add"
 alias gcmsg="git commit -m"
 alias gd="git diff"
