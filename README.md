@@ -21,18 +21,35 @@ Some useful git configuration can be included in `~/.gitconfig`
 
 ```ini
 [user]
-	name = <YOUR NAME>
-	email = <YOUR EMAIL>
+name = <YOUR NAME>
+email = <YOUR EMAIL>
+signingkey = <YOUR GPG KEY ID>
+
 [include]
-	path = ~/.dotfiles/gitconfig
+path = ~/.dotfiles/gitconfig
+
 [includeIf "gitdir:~/src/work/"]
-	path = ~/.gitconfig-work
+path = ~/.gitconfig-work
+
 [includeIf "gitdir:~/src/projects/"]
-	path = ~/.gitconfig-personal
+path = ~/.gitconfig-personal
+
+[commit]
+gpgsign = true
+
+[tag]
+gpgsign = true
 ```
 
 With these includeIf statements we can have custom settings based on folders,
 this can be useful if you use have different git email for work vs. personal for example.
+
+This config suggest that you use GPG to sign your commits. If you're not already doing so you
+read up on it in the GitHub documentation.
+
+Sources:
+
+- [GitHub Docs: Managing commit signature verification](https://docs.github.com/en/authentication/managing-commit-signature-verification)
 
 ## macOS terminal
 
