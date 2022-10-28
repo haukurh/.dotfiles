@@ -50,6 +50,11 @@ unset color_prompt
 # Set default editor
 export EDITOR="vim"
 
+# enable color support of ls
+if [ -x /usr/bin/dircolors ]; then
+	test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+fi
+
 # basic aliases
 if [ -f ~/.dotfiles/aliases ]; then
 	. ~/.dotfiles/aliases

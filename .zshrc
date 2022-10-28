@@ -32,8 +32,11 @@ parse_git_branch() {
 	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
-# Color terminal
-PROMPT='%10F%n%9F@%10F%m%f: %4F%~%9F$(parse_git_branch)%f \$ '
+# Enable colored terminal
+export CLICOLOR="1"
+
+# Color terminal prompt
+export PROMPT='%10F%n%9F@%10F%m%f: %4F%~%9F$(parse_git_branch)%f \$ '
 
 # Set default editor
 export EDITOR="vim"
