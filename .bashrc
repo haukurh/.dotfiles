@@ -1,7 +1,7 @@
 # If not running interactively, don't do anything
 case $- in
-  *i*) ;;
-    *) return;;
+	*i*) ;;
+	*) return;;
 esac
 
 # don't put duplicate lines or lines starting with space in the history.
@@ -26,12 +26,12 @@ export PATH="$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 # Git branch to display in prompt
 parse_git_branch() {
-  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+	git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-  xterm-color|*-256color) color_prompt=yes;;
+	xterm-color|*-256color) color_prompt=yes;;
 esac
 
 COLOR_RED='\[\033[0;91m\]'
@@ -41,9 +41,9 @@ COLOR_RESET='\[\033[00m\]'
 PROMPT_TITLE='\[\e]0;\u@\h: \w\a\]'
 
 if [ "$color_prompt" = yes ]; then
-  PS1="${PROMPT_TITLE}${COLOR_GREEN}\u${COLOR_RED}@${COLOR_GREEN}\h${COLOR_RESET}: ${COLOR_BLUE}\w${COLOR_RED}\$(parse_git_branch)${COLOR_RESET} \$ "
+	PS1="${PROMPT_TITLE}${COLOR_GREEN}\u${COLOR_RED}@${COLOR_GREEN}\h${COLOR_RESET}: ${COLOR_BLUE}\w${COLOR_RED}\$(parse_git_branch)${COLOR_RESET} \$ "
 else
-  PS1="${PROMPT_TITLE}\u@\h:\w$(parse_git_branch) \$ "
+	PS1="${PROMPT_TITLE}\u@\h:\w$(parse_git_branch) \$ "
 fi
 unset color_prompt
 
@@ -52,24 +52,24 @@ export EDITOR="vim"
 
 # basic aliases
 if [ -f ~/.dotfiles/aliases ]; then
-  . ~/.dotfiles/aliases
+	. ~/.dotfiles/aliases
 fi
 
 # custom aliases
 if [ -f ~/.bash_aliases ]; then
-  . ~/.bash_aliases
+	. ~/.bash_aliases
 fi
 
 # Custom settings
 if [ -f ~/.bashrc.mine ]; then
-  . ~/.bashrc.mine
+	. ~/.bashrc.mine
 fi
 
 # bash completion
 if ! shopt -oq posix; then
-  if [ -f /usr/share/bash-completion/bash_completion ]; then
-    . /usr/share/bash-completion/bash_completion
-  elif [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
-  fi
+	if [ -f /usr/share/bash-completion/bash_completion ]; then
+		. /usr/share/bash-completion/bash_completion
+	elif [ -f /etc/bash_completion ]; then
+		. /etc/bash_completion
+	fi
 fi
