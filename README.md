@@ -6,7 +6,7 @@ Configuration files for zsh and bash are available.
 
 Easiest way to implement:
 
-```bash
+```shell
 cd ~
 git clone git@github.com:haukurh/.dotfiles.git
 # bash
@@ -19,7 +19,7 @@ mv .zshrc .zshrc.bak && ln -s .dotfiles/.zshrc .
 
 Some useful git configuration can be included in `~/.gitconfig`
 
-```
+```ini
 [user]
 	name = <YOUR NAME>
 	email = <YOUR EMAIL>
