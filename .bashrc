@@ -56,6 +56,11 @@ if [ -f ~/.bash_aliases ]; then
   . ~/.bash_aliases
 fi
 
+# Custom settings
+if [ -f ~/.bashrc.mine ]; then
+  . ~/.bashrc.mine
+fi
+
 alias ls='ls --color=auto'
 alias ll='ls -alhF'
 
