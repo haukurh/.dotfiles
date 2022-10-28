@@ -47,8 +47,6 @@ else
 fi
 unset color_prompt
 
-export PATH="$PATH:~/bin:~/.php"
-
 # basic aliases
 if [ -f ~/.dotfiles/aliases ]; then
   . ~/.dotfiles/aliases
