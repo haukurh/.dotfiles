@@ -43,7 +43,7 @@ PROMPT_TITLE='\[\e]0;\u@\h: \w\a\]'
 if [ "$color_prompt" = yes ]; then
 	PS1="${PROMPT_TITLE}${COLOR_GREEN}\u${COLOR_RED}@${COLOR_GREEN}\h${COLOR_RESET}: ${COLOR_BLUE}\w${COLOR_RED}\$(parse_git_branch)${COLOR_RESET} \$ "
 else
-	PS1="${PROMPT_TITLE}\u@\h:\w$(parse_git_branch) \$ "
+	PS1="${PROMPT_TITLE}\u@\h:\w\$(parse_git_branch) \$ "
 fi
 unset color_prompt
 
