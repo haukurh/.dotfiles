@@ -1,5 +1,6 @@
 syntax on		" Use syntax higlighting
 set paste		" Put Vim in Paste mode
+set noautoindent	" Disable auto indent
 set ignorecase		" Do case insensitive matching
 set title		" Sets terminal window title if supported
 set novisualbell	" Turns off visual bell
