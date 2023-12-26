@@ -1,6 +1,7 @@
 # basic aliases
 alias ls="ls --color=auto"
-alias ll="ls -alh"
+alias ll="ls -lh"
+alias l="ls -alh"
 alias grep="grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,node_modules,vendor}"
 alias egrep="egrep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,node_modules,vendor}"
 alias fgrep="fgrep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,node_modules,vendor}"
