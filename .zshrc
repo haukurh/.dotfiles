@@ -37,6 +37,10 @@ setopt HIST_VERIFY               # Don't execute immediately upon history expans
 autoload -U compinit
 compinit
 
+# Ensure emacs keybinding when in tmux
+# blog post: https://matija.suklje.name/zsh-vi-and-emacs-modes
+bindkey -e
+
 # Base path
 export PATH="$HOME/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
